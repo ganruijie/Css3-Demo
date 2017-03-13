@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            background: url("image/bg.jpg");
+        }
+        .box{
+            width: 600px;
+            height: 600px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .box .same{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            border-radius:50%;
+            border: 1px solid #47ADCB;
+            /* 平移使其居中 */
+            transform:translate(-50%,-50%);
+        }
+        .first {
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: yellow;
+            border: 1px solid #FFF412;
+            box-shadow:0px 0px 50px #FFF412;
+            border-radius: 25px;
+            /* transform:translate(-50%,-50%); */
+        }
+        .second{
+            height: 100px;
+            width: 100px;
+            animation: move 2s linear infinite;
+        }
+
+        .three{
+            height: 150px;
+            width: 150px;
+            background: url("image/asteroids_meteorids.png");
+            background-size:150px 150px ;
+            animation: move 4s linear infinite;
+        }
+
+        .four{
+            height: 200px;
+            width: 200px;
+            animation: move 6s linear infinite;
+        }
+
+        .five{
+            height: 250px;
+            width: 250px;
+            animation: move 8s linear infinite;
+        }
+
+        .six{
+            height: 300px;
+            width: 300px;
+            animation: move 12s linear infinite;
+        }
+        .seven{
+            height: 350px;
+            width: 350px;
+            animation: move 16s linear infinite;
+        }
+        .eight{
+            height: 400px;
+            width: 400px;
+            animation: move 20s linear infinite;
+        }
+        span{
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: blue;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform:translate(-50%,-50%);
+        }
+        .seven>span>span{
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+            background-color: red;
+            position: absolute;
+            left: 50%;
+            top: -8px;
+            transform:translate(-50%,-50%);
+        }
+        .seven>span{
+            height: 12px;
+            width: 12px;
+            animation: move 2s linear infinite;
+        }
+        /* 动画关键帧设置 */
+        @keyframes move {
+            from{
+                transform:translate(-50%,-50%) rotate(0deg);
+            }
+            to{
+                transform:translate(-50%,-50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="same first"></div>
+    <div class="same second">
+        <span></span>
+    </div>
+    <div class="same three">
+        <span></span>
+    </div>
+    <div class="same four">
+        <span></span>
+    </div>
+    <div class="same five">
+        <span></span>
+    </div>
+    <div class="same six"><span></span></div>
+    <div class="same seven"><span><span></span></span></div>
+    <div class="same eight"><span></span></div>
+</div>
+
+
+</body>
+</html>
